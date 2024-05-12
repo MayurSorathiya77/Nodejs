@@ -23,7 +23,7 @@ Router.get('/', async (req, res) => {
         console.log(users);
 
         const html = `<ol>${users.map((user) => `<li>${user.first_name}</li>`).join('')}</ol>`;
-
+        console.log(`this is for new youser${process.pid}`)
         return res.send(html);
     } catch (error) {
         console.error('Error occurred while fetching users:', error);
