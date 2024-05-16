@@ -22,9 +22,9 @@ else
 {
     
 const app = express();
-const port = 7777;
+const port = 8000;
 
-mongoose.connect('mongodb://127.0.0.1:27017/userDatabase')
+mongoose.connect('mongodb://host.docker.internal:27017/userDatabase')
 .then(()=>{console.log("Database connected...........................")});
 
 app.use(express.urlencoded({extended:false}));
